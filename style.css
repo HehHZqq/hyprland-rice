@@ -1,0 +1,119 @@
+* {
+    border: none;
+    font-family: "JetbrainsMono Nerd Font";
+    font-size: 16px;
+}
+
+window#waybar {
+    background: #121212;
+    color: #ffffff;
+    min-height: 48px; /* Увеличиваем высоту */
+    margin: 6px 10px; /* Добавляем отступы по краям */
+    border-radius: 16px; /* Закругляем края всей панели */
+}
+
+/* Общие стили для всех блоков */
+#network,
+#keyboard-state,
+#cava,
+#language,
+#pulseaudio,
+#clock,
+#privacy,
+#idle_inhibitor,
+#memory,
+#cpu,
+#custom-launcher,
+#tray,
+#window,
+#hyprland-window,
+#custom-cava,
+#workspaces {
+    padding: 0 12px; /* Немного увеличиваем padding */
+    background: #121212;
+    color: #ffffff;
+    margin: 0 2px;
+    border-radius: 10px; /* Увеличиваем скругления элементов */
+}
+
+/* Специфичные классы для каждого модуля */
+#custom-launcher {
+    border-radius: 10px 0 0 10px; /* Увеличиваем скругления */
+    /* color: #1793d1; */
+    font-size: 20px;
+    margin-left: 4px; /* Добавляем отступ слева */
+}
+
+#hyprland-workspaces {
+    border-radius: 0 10px 10px 0; /* Увеличиваем скругления */
+}
+
+#hyprland-window {
+    border-radius: 10px; /* Увеличиваем скругления */
+}
+
+#clock {
+    border-radius: 10px; /* Увеличиваем скругления */
+}
+
+#tray {
+    border-radius: 10px 0 0 10px; /* Увеличиваем скругления */
+    margin-right: 4px; /* Добавляем отступ справа */
+}
+
+#custom-cava {
+    border-radius: 0;
+}
+
+#hyprland-language {
+    border-radius: 0;
+}
+
+#pulseaudio {
+    border-radius: 0;
+}
+
+#cpu {
+    border-radius: 0;
+}
+
+#memory {
+    border-radius: 0 10px 10px 0; /* Увеличиваем скругления */
+    margin-right: 4px; /* Добавляем отступ справа */
+}
+
+#workspaces button {
+    padding: 0 6px; /* Немного увеличиваем padding */
+    color: #ffffff;
+    border-radius: 8px; /* Увеличиваем скругления */
+    margin: 0 2px;
+}
+
+#workspaces button.active {
+    border-radius: 8px; /* Увеличиваем скругления */
+}
+
+#workspaces button.urgent {
+    background: #121212;
+    border-radius: 8px; /* Увеличиваем скругления */
+}
+
+#pulseaudio.muted,
+#network.disconnected {
+    color: #888888;
+}
+
+/* Добавляем вертикальные отступы для контента внутри модулей */
+#custom-launcher,
+#tray,
+#clock,
+#pulseaudio,
+#cpu,
+#memory,
+#hyprland-language,
+#custom-cava,
+#hyprland-workspaces,
+#hyprland-window {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}

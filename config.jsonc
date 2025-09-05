@@ -1,0 +1,84 @@
+{
+    "layer": "top",
+    "height": 32, // Добавляем высоту панели
+    "margin-top": 6, // Отступ сверху
+    "margin-bottom": 6, // Отступ снизу
+    "margin-left": 6, // Отступ слева
+    "margin-right": 6, // Отступ справа
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "custom/cava", "hyprland/language", "pulseaudio", "cpu", "memory"],
+
+    "pulseaudio": {
+        "tooltip": false,
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-muted": "muted",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "format-icons": {
+            "default": [""]
+        }
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "hyprland/language": {
+        "format": "{1}",
+        "tooltip": false
+    },
+
+    "cpu": {
+    "interval": 1,
+    "format": "  {usage}%",
+    "tooltip": false
+    },
+
+    "memory": {
+        "interval": 1,
+        "format": "  {used:0.1f} GB",
+        "tooltip": false,
+        "on-click-right": "killall rofi"
+    },
+
+    "custom/launcher": {
+        "format": " ",
+        "on-click": "wofi --show drun",
+        "on-click-right": "killall wofi",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "tooltip": false,
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "tooltip": false,
+        "max-length": 60
+    },
+
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/cava.sh",
+        "tooltip": false
+    }
+}
