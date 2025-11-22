@@ -8,8 +8,8 @@ window#waybar {
     background: #121212;
     color: #ffffff;
     min-height: 48px; /* Увеличиваем высоту */
-    margin: 6px 10px; /* Добавляем отступы по краям */
-    border-radius: 16px; /* Закругляем края всей панели */
+    margin: 0px 0px; /* Добавляем отступы по краям */
+    border-radius: 0px; /* Закругляем края всей панели */
 }
 
 /* Общие стили для всех блоков */
